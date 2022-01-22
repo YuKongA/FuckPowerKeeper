@@ -3,8 +3,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
+        maven("https://api.xposed.info")
     }
 }
-rootProject.name = "FuckPowerKeeper"
-include ':app'
+
+rootProject.name = "FuckMiuiFps"
+include(":app")

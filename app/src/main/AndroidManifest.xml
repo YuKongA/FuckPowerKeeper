@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yuk.fuckpowerkeeper">
+    package="com.yuk.fuckMiuiFps">
 
     <application
-        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
-        android:label="FuckPowerKeeper"
+        android:label="FuckMiuiFps"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
         <meta-data
@@ -14,10 +13,10 @@
 
         <meta-data
             android:name="xposeddescription"
-            android:value="屏蔽MIUI云控刷新率配置" />
+            android:value="屏蔽MIUI云控刷新率配置,解除高刷与防闪烁互不相容" />
 
         <meta-data
             android:name="xposedminversion"
-            android:value="82" />
+            android:value="93" />
     </application>
 </manifest>

@@ -1,6 +1,8 @@
-package com.yuk.fuckpowerkeeper
+package com.yuk.fuckMiuiFps
 
-import de.robv.android.xposed.*
+import de.robv.android.xposed.IXposedHookLoadPackage
+import de.robv.android.xposed.XC_MethodHook
+import de.robv.android.xposed.XposedHelpers
 import de.robv.android.xposed.callbacks.XC_LoadPackage
 
 class XposedInit : IXposedHookLoadPackage {
@@ -42,9 +44,29 @@ class XposedInit : IXposedHookLoadPackage {
                         }
                     })
             }
-            else -> {
-                return
+            "com.xiaomi.misettings" -> {
+                XposedHelpers.findAndHookMethod(
+                    "com.xiaomi.misettings.widget.DCHintPreference",
+                    lpparam.classLoader,
+                    "b",
+                    object : XC_MethodHook() {
+                        override fun beforeHookedMethod(param: MethodHookParam) {
+                            param.result = false
+                        }
+                    })
+                XposedHelpers.findAndHookMethod(
+                    "b.c.a.b.a.b",
+                    lpparam.classLoader,
+                    "a",
+                    String::class.java,
+                    Boolean::class.java,
+                    object : XC_MethodHook() {
+                        override fun beforeHookedMethod(param: MethodHookParam) {
+                            if (param.args[0] == "dc_backlight_fps_incompatible") param.result = false
+                        }
+                    })
             }
+            else -> return
         }
     }
 }
