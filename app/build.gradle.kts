@@ -5,14 +5,13 @@ plugins {
 }
 
 android {
-    compileSdk = 32
-    buildToolsVersion = "32.0.0"
+    compileSdk = 33
     defaultConfig {
         applicationId = "com.yuk.fuckMiuiFps"
         minSdk = 28
-        targetSdk = 32
-        versionCode = 11
-        versionName = "1.1"
+        targetSdk = 33
+        versionCode = 12
+        versionName = "1.2"
     }
     buildTypes {
         release {

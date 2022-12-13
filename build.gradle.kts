@@ -1,6 +1,6 @@
 buildscript {
     var kotlin_version: String by extra
-    kotlin_version = "1.6.10"
+    kotlin_version = "1.7.22"
     repositories {
         google()
         mavenCentral()
@@ -8,7 +8,7 @@ buildscript {
 
     dependencies {
         //noinspection AndroidGradlePluginVersion,GradleDependency
-        classpath("com.android.tools.build:gradle:7.2.0-alpha07")
+        classpath("com.android.tools.build:gradle:7.3.1")
         classpath(kotlin("gradle-plugin", kotlin_version))
 
         // NOTE: Do not place your application dependencies here; they belong

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.yuk.fuckMiuiFps">
 
     <application
-        android:icon="@mipmap/ic_launcher"
         android:label="FuckMiuiFps"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true">
+        android:supportsRtl="true"
+        tools:ignore="MissingApplicationIcon">
         <meta-data
             android:name="xposedscope"
             android:resource="@array/xposed_scope" />
 
         <meta-data
             android:name="xposeddescription"
-            android:value="屏蔽MIUI云控刷新率配置,解除高刷与防闪烁互不相容" />
+            android:value="屏蔽 MIUI 云控刷新率配置" />
 
         <meta-data
             android:name="xposedminversion"
